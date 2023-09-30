@@ -1,0 +1,90 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.5 (32 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                            AC Analysis of dac                            ***
+********************************************************************************
+Limits
+======
+Frequency Range          Auto 100,1
+Number of Points         51
+Temperature              Linear 27
+Maximum Change %         5
+Noise Input              NONE
+Noise Output             2
+Run Options              Normal
+State Variables          Zero
+Operating Point          On
+Auto Scale Ranges        On
+Accumulate Plots         Off
+Ignore Expression Errors Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1             1.500   OUT           1.000   3             2.750  
+4             5.375   5             0.000   6             0.000  
+7             0.000   8            16.000   9            16.000  
+10            0.000   11            0.000   12            0.000  
+13            1.000  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:               R11           R12           R13           R21           R22
+V                  500.000m        1.250         2.625        -1.000        -1.500 
+Power DC Terms:
+PD                 250.000u        1.563m        6.891m      500.000u        1.125m
+
+DC Pin Currents:
+Ir                 500.000u        1.250m        2.625m     -500.000u     -750.000u
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:               R23           R24             W
+V                   -2.750        10.625        -5.375 
+Power DC Terms:
+PD                   3.781m       56.445m       14.445m
+
+DC Pin Currents:
+Ir                  -1.375m        5.313m       -2.688m
+
+Device Variables:
+tc1                  0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:            X3.E1         X2.E1         X1.E1         X0.E1
+V                   0.000         0.000         0.000        16.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000        85.000m
+
+DC Pin Currents:
+ISource           500.000u      750.000u        1.375m       -5.312m
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               V1            V2            V3            V4            V5
+V                  16.000         0.000         0.000         0.000         1.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000         0.000         0.000 
+
+

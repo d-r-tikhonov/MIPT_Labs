@@ -1,0 +1,79 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                        Transient Analysis of hpar                        ***
+***                           10.09.2022 18:22:09                            ***
+********************************************************************************
+Limits
+======
+Maximum Run Time           1u
+Output Start Time (tstart) 0
+Maximum Time Step          0
+Number of Points           51
+Temperature                Linear 27
+Retrace Runs               1
+Run Options                Normal
+State Variables            Zero
+Operating Point            On
+Operating Point Only       Off
+Auto Scale Ranges          On
+Accumulate Plots           Off
+Fixed Time Step            Off
+Periodic Steady State      Off
+Ignore Expression Errors   Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1             1.200   2             2.200   3           600.000m 
+4           600.000m  5             1.000  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:               RL1           RL2           RR1           RR2           RL3
+V                   -1.000         1.200         0.000      -400.000m       -1.200 
+Power DC Terms:
+PD                   1.000m      720.000u        0.000        80.000u      480.000u
+
+DC Pin Currents:
+Ir                  -1.000m      600.000u        0.000      -200.000u     -400.000u
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:               RR3
+V                 -600.000m
+Power DC Terms:
+PD                 120.000u
+
+DC Pin Currents:
+Ir                -200.000u
+
+Device Variables:
+tc1                  0.000 
+tc2                  0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               I1            U2
+V                  -2.200         1.000 
+Power DC Terms:
+PG                  2.200m      200.000u
+
+DC Pin Currents:
+ISource             1.000m     -200.000u
+
+

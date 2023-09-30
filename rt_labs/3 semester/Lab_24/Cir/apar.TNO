@@ -1,0 +1,79 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.5 (32 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                        Transient Analysis of apar                        ***
+***                           07.09.2022 17:39:55                            ***
+********************************************************************************
+Limits
+======
+Maximum Run Time           1u
+Output Start Time (tstart) 0
+Maximum Time Step          0
+Number of Points           51
+Temperature                Linear 27
+Retrace Runs               1
+Run Options                Normal
+State Variables            Zero
+Operating Point            On
+Operating Point Only       Off
+Auto Scale Ranges          On
+Accumulate Plots           Off
+Fixed Time Step            Off
+Periodic Steady State      Off
+Ignore Expression Errors   Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1           500.000m  2             1.000   3           250.000m 
+4           125.000m  5            62.500m 
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:               R11           R12            R4           R15           R21
+V                 -500.000m     -250.000m     -125.000m      -62.500m     -500.000m
+Power DC Terms:
+PD                 250.000u       62.500u       15.625u        3.906u      125.000u
+
+DC Pin Currents:
+Ir                -500.000u     -250.000u     -125.000u      -62.500u     -250.000u
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:               R22           R23           R24             W
+V                 -250.000m     -125.000m      -62.500m      -62.500m
+Power DC Terms:
+PD                  31.250u        7.813u        1.953u        1.953u
+
+DC Pin Currents:
+Ir                -125.000u      -62.500u      -31.250u      -31.250u
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               V1
+V                   1.000 
+Power DC Terms:
+PG                500.000u
+
+DC Pin Currents:
+ISource          -500.000u
+
+
