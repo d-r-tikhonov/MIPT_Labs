@@ -22,24 +22,12 @@ Fixed Time Step            Off
 Periodic Steady State      Off
 Ignore Expression Errors   Off
 
-Stepping Options
-================
-Stepping is Nested
-
-Step What  R Value
-From       4.9k
-To         4.9k
-Step Value 2k
-Method     Linear
-
-
 
 *****************************************************
 ***                Temperature=27                 ***
-***                    R=4.9k                     ***
 *****************************************************
 
-Temperature=27 R=4.9k
+Temperature=27
 
 Model parameters for devices of type Sine Source
 ================================================
