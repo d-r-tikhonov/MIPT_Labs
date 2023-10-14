@@ -1,5 +1,5 @@
 ********************************************************************************
-***                       Micro-Cap 12.2.0.5 (32 bit)                        ***
+***                       Micro-Cap 12.2.0.3 (64 bit)                        ***
 ***                                                                          ***
 ***                                                                          ***
 ***                         AC Analysis of rlc2pole                          ***
@@ -60,7 +60,7 @@ DC Operating Point Voltages
 ===========================
 Node         Voltage  Node         Voltage  Node         Voltage 
 1             0.000   2             0.000   BP            0.000  
-HP            0.000   LP            0.000   6             0.000  
+4             0.000   HP            0.000   LP            0.000  
 7             0.000   8             0.000  
 
 DC Operating Point Inductor Current

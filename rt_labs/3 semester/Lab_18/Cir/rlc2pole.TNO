@@ -1,5 +1,5 @@
 ********************************************************************************
-***                       Micro-Cap 12.2.0.5 (32 bit)                        ***
+***                       Micro-Cap 12.2.0.3 (64 bit)                        ***
 ***                                                                          ***
 ***                                                                          ***
 ***                      Transient Analysis of rlc2pole                      ***
@@ -8,8 +8,8 @@ Limits
 ======
 Maximum Run Time           60u
 Output Start Time (tstart) 0
-Maximum Time Step          0.0001u
-Number of Points           5100
+Maximum Time Step          0.01
+Number of Points           51
 Temperature                Linear 27
 Retrace Runs               1
 Run Options                Normal
@@ -18,7 +18,7 @@ Operating Point            On
 Operating Point Only       Off
 Auto Scale Ranges          Off
 Accumulate Plots           Off
-Fixed Time Step            On
+Fixed Time Step            Off
 Periodic Steady State      Off
 Ignore Expression Errors   Off
 
@@ -63,7 +63,7 @@ DC Operating Point Voltages
 ===========================
 Node         Voltage  Node         Voltage  Node         Voltage 
 1             0.000   2             0.000   BP            0.000  
-HP            0.000   LP            0.000   6             0.000  
+4             0.000   HP            0.000   LP            0.000  
 7             0.000   8             0.000  
 
 DC Operating Point Inductor Current
