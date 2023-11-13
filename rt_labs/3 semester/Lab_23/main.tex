@@ -1,0 +1,299 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[a4paper,top=1.5cm, bottom=1.5cm, left=1cm, right=1cm]{geometry}
+
+% Работа с русским языком
+\usepackage[utf8]{inputenc}
+\usepackage{mathtext}                % русские буквы в формулах
+\usepackage[english, russian]{babel} % локализация и переносы
+
+\usepackage{graphicx}   % Вставка изображений
+\usepackage{float}      % "Плавающие" изображения3
+\usepackage{wrapfig}    % Обтекание фигур (таблиц, картинок и прочего)
+\usepackage{subfig}
+\graphicspath{ {./images/} }
+
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{indentfirst}
+\usepackage{longtable}
+\graphicspath{{pictures/}}
+\usepackage[square,sort,comma,numbers]{natbib}
+\usepackage{bm}
+
+%%% Колонтитулы
+\usepackage{titleps}
+\newpagestyle{main}{
+	\setheadrule{0.4pt}
+	\sethead{Длинные линии}{}{}
+	\setfootrule{0.4pt}                       
+	\setfoot{ФРКТ МФТИ, 2023}{}{\thepage} 
+}
+\pagestyle{main}  
+
+\begin{document}
+    \begin{titlepage}
+	\begin{center}
+            {\large МОСКОВСКИЙ ФИЗИКО-ТЕХНИЧЕСКИЙ ИНСТИТУТ (НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ)}
+	\end{center}
+ 
+	\begin{center}
+		{\large Физтех-школа радиотехники и компьютерных технологий}
+	\end{center}
+	
+	\vspace{8cm}
+	{\LARGE
+		\begin{center}
+                {\bf Отчёт о выполнении работы №23}\\
+                Длинные линии
+		\end{center}
+	}
+	\vspace{5cm}
+	\begin{flushright}
+		{\Large Автор:\\ Тихонов Дмитрий Романович, \\
+			\vspace{0.2cm}
+			студент группы Б01-206}
+	\end{flushright}
+	\vspace{5cm}
+	\begin{center}
+		\Large Долгопрудный, 2023
+	\end{center}
+    \end{titlepage}
+
+
+    \section*{Задание 2}
+
+    \subsection*{Согласованная линия}
+
+     Откроем файл \textbf{TLine.cir}. На схеме установим $R_s = R_l = 50$ Ом и выведем график в режиме \textit{Transient}.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width = 14 cm]{images/TLine.png}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width = 14 cm]{images/Graph1.png}
+    \end{figure}
+
+    Проанализируем графики и получим: $v(u) = 0,5 \: \textit{В}$ и $i(l)\cdot \omega = 0,5 \: \textit{В}$. Убедимся, что источник отражает предельную мощность:
+
+    \[P = v(u)i(l) = \frac{V^2}{4R_s}, \: \text{где} \: V = 1\textit{ В}\]
+
+    \[P\omega = v(u)i(l)\omega = 0,5\cdot 0,5 = 0,25 \equiv \frac{V^2}{4R_s} \omega,\]
+
+    убедились, что источник отражает предельную мощность.
+
+    \subsection*{Рассогласованный источник}
+
+    Установим $R_s = \frac{\omega}{3} = \frac{50}{3} \: \textit{Ом}$. Выведем график в режиме \textit{Transient}.
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width = 14 cm]{images/Graph2.png}
+    \end{figure}
+
+    Проанализируем графики и получим: $v(u) = 0,75 \: \textit{В}$ и $i(l)\cdot \omega = 0,75 \: \textit{В}$. Проверим, что отдаваемая мощность \textit{P} меньше мощности источника в $(1 - \rho_s^2)$ раз:
+
+    \[\rho_s = \frac{R_s - \omega}{R_s + \omega} = -\frac{1}{2}\]
+
+    \[P\omega = v(u)i(l)\omega = 0,75 \cdot 0,75 = 0,5625 \equiv \frac{V^2}{4R_s} \omega (1 - \rho_s^2),\]
+
+    Повторим все это при $R_s = 3\omega = 150 \: \textit{Ом}$
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width = 14 cm]{images/Graph3.png}
+    \end{figure}
+
+    Проанализируем графики и получим: $v(u) = 0,25 \: \textit{В}$ и $i(l)\cdot \omega = 0,25 \: \textit{В}$. Проверим, что отдаваемая мощность \textit{P} меньше мощности источника в $(1 - \rho_s^2)$ раз:
+
+    \[\rho_s = \frac{R_s - \omega}{R_s + \omega} = \frac{1}{2}\]
+
+    \[P\omega = v(u)i(l)\omega = 0,25 \cdot 0,25 = 0,0625 \equiv \frac{V^2}{4R_s} \omega (1 - \rho_s^2),\]
+
+    \subsection*{Рассогласованная нагрузка}
+
+    Установим варьированием $R_l = \frac{\omega}{3} = \frac{50}{3} \: \textit{Ом}$ $[\rho_l = - \frac{1}{2}]$, $R_l = 0 \: \textit{Ом}$ $[\rho_l = 0]$, $R_l = 3\omega = 150 \: \textit{Ом}$, $[\rho_l =  \frac{1}{2}]$ ($R_s = 50 \textit{Ом}$). Измерим установившиеся значения амплитуд волн, напряжений и токов.
+
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width = 14 cm]{images/Graph4.png}
+    \caption{$R_l = \frac{\omega}{3}$}
+    \end{figure}
+
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width = 14 cm]{images/Graph5.png}
+    \caption{$R_l = 0$}
+    \end{figure}
+
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width = 14 cm]{images/Graph6.png}
+    \caption{$R_l = 3\omega$}
+    \end{figure}
+
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width = 14 cm]{images/Graph7.png}
+    \caption{$R_l = 50k$}
+    \end{figure}
+
+    Запишем данные в таблицу:
+
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|}
+        \hline 
+        $R_l/\omega$ & 1/3 & 0 & 3 & $50k \cdot \omega$ \\ 
+        \hline 
+        A & 0,5 & 0,5 & 0,5 & 0,5 \\ 
+        \hline 
+        B & -0,25 & -0,5 & 0,25 & 0,5 \\ 
+        \hline 
+        $v(u)$ & 0,25 & 0 & 0,75 & 1 \\ 
+        \hline 
+        $i(l)\omega$ & 0,75 & 1 & 0,25 & 0 \\ 
+        \hline 
+        \end{tabular} 
+    \end{center}
+
+    \subsection*{Рассогласованные источник и нагрузка}
+
+    Установим на схеме $R_s = 50/3 \: [\rho_s = -\frac{1}{2}]$. Установим варьированием $R_l = 0 \: [\rho_l = -1]$, $\rho_s \rho_l = \frac{1}{2}$, выведем графики.
+
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width = 14 cm]{images/Graph8.png}
+    \caption{$R_l = 0, R_s = 50/3$}
+    \end{figure}
+
+    Убедимся в том, что амплитуда пдающей волны нарастает, как последовательных частичных сумм прогрессии:
+
+    \[A = \frac{\omega}{\omega + R_s} \Big( 1 + \rho_s \rho_l + (\rho_s \rho_l)^2 + ...\Big) = \frac{3}{4} \Big( 1 + \frac{1}{2} + \frac{1}{4} + ... \Big) = 1,5\]
+
+    Первый шаг $(n = 1): \: A = 0,75$.
+    
+    Второй шаг $(n = 2): \: A = 9/8$.
+    
+    Третий шаг $(n = 3): \: A = 21/16$.
+
+    Установившееся значение: $(n = \infty): \: A = 1,5$.\\
+
+    Повторим наблюдения при $R_l = 50k \simeq \infty \: [\rho_l = 1], \: \rho_s \rho_l = -\frac{1}{2}$:
+
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width = 14 cm]{images/Graph9.png}
+    \caption{$R_l = 50k, R_s = 50/3$}
+    \end{figure}
+
+    \[A = \frac{\omega}{\omega + R_s} \Big( 1 + \rho_s \rho_l + (\rho_s \rho_l)^2 + ...\Big) = \frac{3}{4} \Big( 1 - \frac{1}{2} + \frac{1}{4} - ... \Big) = \frac{3}{4} \cdot \frac{2}{3} = \frac{1}{2}\]
+
+    Первый шаг $(n = 1): \: A = 0,75$.
+    
+    Второй шаг $(n = 2): \: A = 3/8$.
+    
+    Третий шаг $(n = 3): \: A = 9/16$.
+    
+    Установившееся значение: $(n = \infty): \: A = 0,5$.\\
+    
+    Установим на схеме $R_s = 150 \: [\rho_s = \frac{1}{2}]$ и повторим наблюдения при $R_l = 0 \:[\rho_l = -1]$.
+
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width = 14 cm]{images/Graph10.png}
+    \caption{$R_l = 0, R_s = 150$}
+    \end{figure}
+
+    \[A = \frac{\omega}{\omega + R_s} \Big( 1 + \rho_s \rho_l + (\rho_s \rho_l)^2 + ...\Big) = \frac{1}{4} \Big( 1 - \frac{1}{2} + \frac{1}{4} - ... \Big) = \frac{1}{4} \cdot \frac{2}{3} = \frac{1}{6}\]
+
+    Первый шаг $(n = 1): \: A = 0,25$.
+    
+    Второй шаг $(n = 2): \: A = 1/8$.
+    
+    Третий шаг $(n = 3): \: A = 3/16$.
+
+    Установившееся значение: $(n = \infty): \: A = \frac{1}{6}$.\\
+
+    Установим на схеме $R_s = 0 \: [\rho_s = -1]$ (предельно сильное рассогласование на источнике) и повторим наблюдения при
+
+    \begin{itemize}
+        \item $R_l = 50k, \: [\rho_l = 1] \quad \Rightarrow A = (1 -1 +1 -...),$
+        \item $R_l = 500, \: [\rho_l = 0,8] \quad \Rightarrow A = (1 -\rho_l + rho_l^2 -...),$
+        \item $R_l = 0, \: [\rho_l = -1] \quad \Rightarrow A = (1 +1 +1 +...),$
+        \item $R_l = 5, \: [\rho_l = -0,8] \quad \Rightarrow A = (1 +\rho_l + rho_l^2 +...),$
+    \end{itemize}
+
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width = 14 cm]{images/Graph11.png}
+    \caption{$R_l = 50k, R_s = 0$}
+    \end{figure}
+    
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width = 14 cm]{images/Graph12.png}
+    \caption{$R_l = 500, R_s = 0$}
+    \end{figure}
+    
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width = 14 cm]{images/Graph13.png}
+    \caption{$R_l = 0, R_s = 0$}
+    \end{figure}
+    
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width = 14 cm]{images/Graph14.png}
+    \caption{$R_l = 5, R_s = 0$}
+    \end{figure}
+
+    \subsection*{Емкостная нагрузка}
+
+    Установить на схеме $R_s = 50$ (согласованный источник), $R_l = 50k \simeq \infty, \: C = 100 \textit{пФ}$.
+
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width = 14 cm]{images/Graph15.png}
+    \caption{$R_l = 50k, R_s = 50$}
+    \end{figure}
+
+    Измерим установившееся значения амплитуд волн напряжений и токов:
+
+    \[A = 0,5 \: \text{В}, B = 0,5 \: \text{В}, v(u) = 1 \: \text{В}, i\omega = 0 \: \text{В}\]
+
+    Оценим по графику постоянную времени $\tau$ экспоненциального переходного процесса:
+
+    \[u = u_0 (1 - \frac{1}{e}),\]
+
+    где $u_0 = 1 \: \textit{В} \: \Rightarrow \: u = 0,63 \textit{В}$, тогда, пользуясь графиком, получим
+
+    \[\tau_{эксп} \approx 5 \: \textit{нс}\]
+
+    Находим экспериментальное значение $\tau$ и убеждаемся, что теоритическое и экспериментальное значения равны друг другу:
+
+    \[\tau_{теор} = \omega C = 5 \: \textit{нс} \equiv \tau_{эксп}\]
+
+    Варьированием установим $R_s = 50/3$, проанализируем графики переходных процессов.
+
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width = 14 cm]{images/Graph16.png}
+    \caption{$R_l = 50k, R_s = 50/3$}
+    \end{figure}
+
+    \[A = 0,5 \: \text{В}, B = 0,5 \: \text{В}, v(u) = 1 \: \text{В}, i\omega = 0 \: \text{В}\]
+
+    Проанализируем графики незатухающего переходного процесса при $R_s = 0$.
+
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width = 14 cm]{images/Graph17.png}
+    \label{fig:Image1}
+    \caption{$R_l = 50k, R_s = 0$}
+    \end{figure}
+    
+\end{document}
