@@ -22,24 +22,12 @@ Fixed Time Step            Off
 Periodic Steady State      Off
 Ignore Expression Errors   Off
 
-Stepping Options
-================
-Stepping is Nested
-
-Step What  RS value
-From       0
-To         0
-Step Value 1
-Method     Linear
-
-
 
 *****************************************************
 ***                Temperature=27                 ***
-***                     RS=0                      ***
 *****************************************************
 
-Temperature=27 RS=0
+Temperature=27
 
 Model parameters for devices of type Pulse
 ==========================================
