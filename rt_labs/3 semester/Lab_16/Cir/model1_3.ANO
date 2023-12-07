@@ -1,0 +1,363 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.3 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                         AC Analysis of model1_3                          ***
+********************************************************************************
+Limits
+======
+Frequency Range          Auto 1E6,100
+Number of Points         51
+Temperature              Linear 27
+Maximum Change %         5
+Noise Input              E
+Noise Output             n
+Run Options              Normal
+State Variables          Zero
+Operating Point          On
+Auto Scale Ranges        Off
+Accumulate Plots         Off
+Ignore Expression Errors Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+N             0.000   EN            0.000   3             0.000  
+4             0.000  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                 R            RS
+V                    0.000         0.000 
+Power DC Terms:
+PD                   0.000         0.000 
+
+DC Pin Currents:
+Ir                   0.000         0.000 
+
+Device Variables:
+tc1                  0.000         0.000 
+tc2                  0.000         0.000 
+
+
+
+Operating Point for Devices of Type Dependent Source
+====================================================
+Instance:                H
+V                   0.000 
+Power DC Terms:
+PG                  0.000 
+
+DC Pin Currents:
+ISource             0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                E
+V                   0.000 
+Power DC Terms:
+PG                  0.000 
+
+DC Pin Currents:
+ISource             0.000 
+
+
+***   NOISE ANALYSIS  FREQUENCY =  100 HZ
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R            RS
+TOTAL               0.033f        0.033f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  6.6303e-017 SQ V/HZ
+(ONOISE)                              =  8.14267e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.5
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.62853e-008 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  110 HZ
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R            RS
+TOTAL               0.033f        0.033f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  6.6303e-017 SQ V/HZ
+(ONOISE)                              =  8.14267e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.5
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.62853e-008 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  130 HZ
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R            RS
+TOTAL               0.033f        0.033f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  6.6303e-017 SQ V/HZ
+(ONOISE)                              =  8.14267e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.5
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.62853e-008 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  170 HZ
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R            RS
+TOTAL               0.033f        0.033f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  6.6303e-017 SQ V/HZ
+(ONOISE)                              =  8.14267e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.5
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.62853e-008 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  250 HZ
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R            RS
+TOTAL               0.033f        0.033f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  6.6303e-017 SQ V/HZ
+(ONOISE)                              =  8.14267e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.5
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.62853e-008 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  410 HZ
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R            RS
+TOTAL               0.033f        0.033f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  6.6303e-017 SQ V/HZ
+(ONOISE)                              =  8.14267e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.5
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.62853e-008 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  730 HZ
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R            RS
+TOTAL               0.033f        0.033f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  6.6303e-017 SQ V/HZ
+(ONOISE)                              =  8.14267e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.5
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.62853e-008 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  1370 HZ
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R            RS
+TOTAL               0.033f        0.033f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  6.6303e-017 SQ V/HZ
+(ONOISE)                              =  8.14267e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.5
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.62853e-008 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  2650 HZ
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R            RS
+TOTAL               0.033f        0.033f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  6.6303e-017 SQ V/HZ
+(ONOISE)                              =  8.14267e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.5
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.62853e-008 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  5210 HZ
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R            RS
+TOTAL               0.033f        0.033f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  6.6303e-017 SQ V/HZ
+(ONOISE)                              =  8.14267e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.5
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.62853e-008 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  10330 HZ
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R            RS
+TOTAL               0.033f        0.033f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  6.6303e-017 SQ V/HZ
+(ONOISE)                              =  8.14267e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.5
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.62853e-008 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  20570 HZ
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R            RS
+TOTAL               0.033f        0.033f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  6.6303e-017 SQ V/HZ
+(ONOISE)                              =  8.14267e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.5
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.62853e-008 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  41050 HZ
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R            RS
+TOTAL               0.033f        0.033f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  6.6303e-017 SQ V/HZ
+(ONOISE)                              =  8.14267e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.5
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.62853e-008 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  82010 HZ
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R            RS
+TOTAL               0.033f        0.033f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  6.6303e-017 SQ V/HZ
+(ONOISE)                              =  8.14267e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.5
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.62853e-008 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  163930 HZ
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R            RS
+TOTAL               0.033f        0.033f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  6.6303e-017 SQ V/HZ
+(ONOISE)                              =  8.14267e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.5
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.62853e-008 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  327770 HZ
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R            RS
+TOTAL               0.033f        0.033f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  6.6303e-017 SQ V/HZ
+(ONOISE)                              =  8.14267e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.5
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.62853e-008 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  655450 HZ
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R            RS
+TOTAL               0.033f        0.033f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  6.6303e-017 SQ V/HZ
+(ONOISE)                              =  8.14267e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.5
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.62853e-008 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  1e+006 HZ
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R            RS
+TOTAL               0.033f        0.033f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  6.6303e-017 SQ V/HZ
+(ONOISE)                              =  8.14267e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.5
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.62853e-008 V/RT HZ
+
+
+
+
