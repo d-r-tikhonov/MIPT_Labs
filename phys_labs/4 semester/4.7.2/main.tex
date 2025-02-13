@@ -1,0 +1,242 @@
+\documentclass[11pt]{beamer} % Определяем тип документа как презентацию
+% в квадратных скобках размер шрифта: 8pt, 9, 10, 11 (def), 12, 14, 17, 20.
+
+\input{preamble} 
+% В преамбуле можно сделать небольшие изменения (цвет, шрифт итд.) Если есть желание изменить больше, возможно, проще выбрать другой шаблон.
+
+\input{title}
+
+\addto\captionsenglish{\renewcommand{\figurename}{Рисунок}}
+\addto\captionsenglish{\renewcommand{\tablename}{Таблица}}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+    \frametitle{Содержание работы}
+    \tableofcontents
+\end{frame}
+
+\section{Введение}
+    \begin{frame}{Цели работы}
+        \begin{itemize}
+            \item исследовать картину интерферирующих волн света, прошедшего кристалл
+            \item найти \textit{полуволновое напряжение} ниобата лития
+            \item определить тип поляризации для \textit{четверть волнового напряжения} на кристалле
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Оборудование}
+        \begin{itemize}
+            \item гелий-неоновый лазер
+            \item поляризатор
+            \item кристалл ниобата лития
+            \item матовая пластинка
+            \item экран
+            \item источник высоковольтного переменного и постоянного напряжения
+            \item фотодиод
+            \item осциллограф
+        \end{itemize}
+    \end{frame}
+    
+\section{Теоретические сведения} 
+    \begin{frame}{Теоретическая справка 1. Эффект Поккельса}
+        \begin{itemize}
+            \item Эффект Поккельса - изменение показателя преломления света в кристалле под действием электрического поля, причём это изменение пропорционально напряжённости электрического поля \cite{lab}.
+            \item Это происходит за счёт анизотропных свойств кристаллов. Под действием постоянного электрического поля электроны смещаются в сторону того или иного иона (в случае кристалла ниобата лития $LiNbO_3$ — это ион $Li$ или $Nb$), при этом меняется поляризуемость среды и связанный с ней показатель преломления.
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Теоретическая справка 2. Одноосный кристалл}
+        \small
+
+        \begin{itemize}
+        \item Кристалл ниобата лития является \textbf{одноосным} кристаллом, то
+есть кристаллом, оптические свойства которого обладают симметрией
+вращения относительно некоторого одного направления, называемого
+оптической осью $z$ кристалла. Для световой волны $E \perp z$, показатель преломления
+равен $n_o = \sqrt{\varepsilon_\perp}$ , а для волны $E \| z$, он равен $n_e = \sqrt{\varepsilon_\|}$.
+        \item В общем случае, когда луч света распространяется под углом $\theta$ к оптической оси $z$, существуют два собственных значения показателя преломления $n_1$ и $n_2$: в \textbf{обыкновенной} волне ($E \perp \text{ плоскости } (k, e_z))$, показатель $n_1 = n_o$, а в \textbf{необыкновенной} ($E$ лежит в плоскости ($k, e_z$)) показатель преломления $n_2$ зависит от угла $\theta$:
+        \begin{equation}
+            \dfrac{1}{n_2^2}=\dfrac{\cos^2 \theta}{n_o^2}+\dfrac{\sin^2 \theta}{n_e^2}.
+        \end{equation}
+
+    
+        \end{itemize}
+       
+    \end{frame}
+
+     \begin{frame}{Теоретическая справка 3. Интерференция}
+        \small
+
+        \begin{itemize}
+        \item Если перед кристаллом, помещённым между скрещенными поляроидами, расположить матовую пластинку, после которой лучи будут рассеиваться под различными углами, то на экране, расположенном за поляроидом, мы увидим тёмные концентрические окружности — результат интерференции обыкновенной и необыкновенной волн.
+        \begin{center}
+             \includegraphics[width=0.7\textwidth]{images/1.png}
+        \end{center}
+       
+        
+        \item Разность фаз $\delta$, приобретаемая при прохождении через кристалл длиной l при условии, что $n_o$ и $n_e$ отличаются незначительно, а углы малы:
+        \begin{equation}
+            \label{eq:squredR_m}
+            \delta = \frac{2\pi}{\lambda}l(n_o - n_e)\theta^2
+        \end{equation}
+
+        
+       
+        \end{itemize}
+       
+    \end{frame}
+
+    \begin{frame}{Теоретическая справка 4. Интерференция}
+        \begin{itemize}
+            \item В случае, когда разрешённое направление анализатора перпендикулярно поляризации лазерного излучения, радиус тёмного кольца с номером $m$ равен
+            \begin{equation}
+                \label{eq:squredR_m}
+                r_m^2 = \dfrac{\lambda}{l} \dfrac{(n_oL)^2}{n_0 - n_e}m.
+            \end{equation}
+        \end{itemize}
+    \end{frame}
+
+     \begin{frame}{Теоретическая справка 5. При наличии поля $E_{x}$}
+        \small
+        \begin{itemize}
+            \item При наличии электрического поля вдоль $x \perp z$ в кристалле появляются новые перпендикулярные
+            главные направления, показатели преломления которых равны $n_o \pm \Delta n$, где
+            $\Delta n = A \cdot E_{x}$.
+            \end{itemize}
+           
+
+            \begin{columns}[T]
+            \begin{column}{0.4\textwidth}
+                \centering
+                \vspace{7mm}
+                \includegraphics[width=1.2\textwidth]{images/pokkels_axes.png}
+                %\caption{\center{График зависимости $x_n$ от $n$}}
+            \end{column}%
+    
+            \begin{column}{0.6\textwidth}
+                \centering
+                \small
+                \begin{itemize}
+                    \item  Пусть поляризация лазера вертикальна, а разрешенное
+            направление анализатора горизонтальна. Тогда, интенсивность света на выходе будет зависеть от прикладываемого напряжения по закону
+                    \begin{equation}
+                    I = I_0 \sin^2\left(\frac{\pi}{2}\frac{U}{U_{\lambda/2}}\right),
+                \end{equation}
+                где $U_{\lambda/2}$ - полуволновое напряжение:
+                \begin{equation}
+                    U_{\lambda/2} = \frac{\lambda}{4A} \frac{d}{l}
+                    \label{eq:poluvolnovoe_napryajenie}
+                \end{equation}
+                \end{itemize}
+                
+            \end{column}%
+    \end{columns}
+       
+
+    \end{frame}
+    
+    \section{Экспериментальная установка}
+
+    \begin{frame}{Схема экспериментальной установки}
+        \begin{figure}
+            \centering
+            \includegraphics[width = \textwidth]{images/2.jpg}
+            \caption{Схема для изучения двойного лучепреломления в электрическом поле}
+            \label{installation}
+        \end{figure}
+    \end{frame}
+
+\section{Результаты измерений и обработка данных}
+
+    \begin{frame}{Интерференция световых волн}
+
+        \begin{columns}
+            \begin{column}{0.5\textwidth}
+                \begin{figure}
+                    \centering
+                    \includegraphics[width = \textwidth]{images/image.png}
+                        \caption{Мальтийский крест}
+                        \label{fig:enter-label}
+                    \end{figure}
+            \end{column}
+
+            \begin{column}{0.5\textwidth}
+                \begin{itemize}
+                    \item В области "мальтийского креста" интерференция отсутствует
+                \end{itemize}
+            \end{column}
+        \end{columns}
+        
+    \end{frame}
+
+    \begin{frame}{Определение разности показателей преломления}      
+        \begin{columns}
+            \begin{column}{0.6\textwidth}
+                \begin{figure}
+                    \centering
+                    \includegraphics[width = \textwidth]{images/graph_squaredR_m.jpg}
+                    \caption{График зависимости $r^2 = f(m)$}
+                \end{figure}
+            \end{column}
+
+            \begin{column}{0.4\textwidth}
+                \begin{itemize}
+                    \item $ L = (85 \pm 1) \text{ см}$ -- расстояние от середины кристалла до экрана
+                    \item $ k = (9.67 \pm 0.06) \text{ см}^2$
+                    \item $n_o - n_e = (0.095 \pm 0.002)$ -- двулучепреломление ниобата лития (\ref{eq:squredR_m})
+                \end{itemize}
+            \end{column}
+    \end{columns}
+    \end{frame}
+
+    \begin{frame}{Определение полуволнового напряжения}
+        \begin{itemize}
+            \item При нулевом напряжении наблюдается минимум интенсивности излучения на экране. Постепенно увеличивая его, получим напряжения:
+            \begin{itemize}
+                \item $U_{\lambda/2} = (450 \pm 15) \text{ В}$ -- максимум интенсивности
+                \item $U_\lambda = (900 \pm 15) \text{ В}$ -- минимум интенсивности
+                \item $U_{3\lambda/2} = (1350 \pm 15) \text{ В}$ -- максимум интенсивности
+            \end{itemize}
+    
+            \item Подадим на кристалл напряжение $U_{\lambda/4} = \frac{1}{2}U_{\lambda/2}$. Вращая анализатор и наблюдая за тем, что яркость пятна на экране не изменяется, убеждаемся, что поляризация круговая
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Определение полуволнового напряжения по фигурам Лиссажу}
+        \begin{table}
+            \centering
+                \begin{tabular}{|c|c|c|}
+                    \hline
+                    \includegraphics[width = 0.3\textwidth]{images/Lissagu1.jpg}  & \includegraphics[width = 0.3\textwidth]{images/Lissagu2.jpg}  &  \includegraphics[width = 0.3\textwidth]{images/Lissagu3.jpg} \\ \hline
+                     $U_{\lambda/2} = (420 \pm 15) \text{ В}$ & $U_\lambda = (870 \pm 15) \text{ В}$  & $U_{3\lambda/2} = (1320 \pm 15) \text{ В}$ \\ \hline
+                \end{tabular}
+                \caption{Фигуры Лиссажу для различных напряжений}
+                \label{tab:lissagu}
+        \end{table}
+    \end{frame}
+
+\section{Заключение}
+
+\begin{frame}{Выводы}
+    \begin{itemize}
+        \item В работе изучена интерференция рассеянного света, прошедшего кристалл ниобата лития. По графику зависимости $r^2(m)$ линейной аппроксимацией для двулучепреломления ниобата лития получили:
+        $$ \boxed{n_0 - n_e = 0.095 \pm 0.002, \qquad (n_0 - n_e)_\text{табл} = 0.09}$$
+
+        \item Рассмотрен эффект Поккельса: несколькими способами определено полуволновое напряжение $U_{\lambda/2}$ на длине волны $\lambda = 0.63 \text{ мкм}$: $U_{\lambda/2} \approx (450 \pm 15)$ В. 
+
+        \item Подав на кристалл четвертьволновое напряжение и вращая анализатор, убедились в том, что поляризация на выходе из кристалла \textbf{круговая}.
+        
+        \item Получены фигуры Лиссажу, отражающие зависимость интенсивности выходного сигнала от подаваемой амплитуды напряжения $I_\text{вых}(U)$ при скрещенных и параллельных поляризациях.
+       
+    \end{itemize}
+\end{frame}
+
+\section{Список литературы}
+\begin{frame}{Список литературы}
+    \printbibliography
+\end{frame}
+
+\end{document}
